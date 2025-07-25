@@ -1,0 +1,73 @@
+what is cdn?
+what is crossorigin ?
+how react - dom will work? React lib for dom operations document object model 
+then why 2 links?
+react works in many deicves and places where used ...so 1st core react ,2nd bridge between react and browser.
+
+--------------------------------------------------------------------------------------------------------
+🌐 What is unpkg.com?
+unpkg is a free, fast, and globally distributed CDN (Content Delivery Network) for everything on npm (Node Package Manager).
+
+Think of it like a public file server that lets you load npm packages directly in the browser, without installing them.
+
+
+
+
+
+
+UMD stands for Universal Module Definition — it's a JavaScript module format that works everywhere:
+
+✅ In the browser
+✅ In Node.js
+✅ With AMD (like RequireJS)
+✅ Without any module system at all
+
+---------------------------------------------------------------------------------------------------------
+
+const heading = React.createElement("h1", {}, "Hello World From React!");
+
+# here the React.createElement--> will create an element inside this it will hold three values 
+
+## (tag,{object},"content inside the tag ") --> ("h1",{},"")
+
+    const para = React.createElement("p", {}, "I am a Java Script Library");
+
+    const container = React.createElement("div",{},heading,para)
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));  
+# here the root is a id which will render the data into this root when we assign it with 
+## ReactDOM--> will render this to root .
+
+    
+
+    root.render(container);
+
+
+    {} --> in the above code wil work like attributes same like html like id ="mainPage",xyz:"abc",
+    we can specify styling.
+
+-----------------------------------------------------------------------------------------------------------
+
+
+props are children and attributes which we pass in -- comes under the ("h1",{}--> pros(attributes) ,""--> children)
+React.createElement is an (js) object
+root.render(container) --> passing react element
+Root.render is coverting the h1 obj and converting into h1 tag above the document
+
+----------------------------------------------------------------------------------------------------------------------
+React element is an object when rendering it will convert into html
+# to insert more child class to div int the react we can specify as array in the children place as shown below 
+
+
+createElement(div,{},[
+    react.createElement("h1",{},""),
+    react.createElement("h1",{},""),
+    react.createElement("h1",{},"")
+    ])
+
+____________________________________________________________________________________________________________________
+
+
+*****when we write something in place root in index.html it will be replaced with app.js root.render from app.js.
+
+
