@@ -71,3 +71,9 @@ ________________________________________________________________________________
 *****when we write something in place root in index.html it will be replaced with app.js root.render from app.js.
 
 
+____________________________________________________________________________________________________________________
+episode 2
+
+git add .
+git commit -m "your message"
+git push
