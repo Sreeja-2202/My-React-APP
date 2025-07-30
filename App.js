@@ -36,23 +36,12 @@
     const para = React.createElement("p", {}, "I am a Java Script Library");
 
     const container = React.createElement("div",{},heading,para)
-    console.log(heading)
+console.log(heading)
 
-    const root = ReactDOM.createRoot(document.getElementById("root")); 
+const jsxheading = <h1>This is JSX😂 JSX is html like syntax </h1>
 
-    
+console.log(jsxheading)
 
-    root.render(parent);
-  
+const root = ReactDOM.createRoot(document.getElementById("root"))
 
-
-
-
-
-
-    
-
-
-    // jsx to simlify the above code 
-    
-
+root.render(jsxheading)
