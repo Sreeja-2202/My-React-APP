@@ -77,3 +77,5 @@ episode 2
 git add .
 git commit -m "your message"
 git push
+____________________________________________________________________________________________________________________
+writing script in package.json 

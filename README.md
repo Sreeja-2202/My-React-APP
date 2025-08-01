@@ -31,3 +31,14 @@
 - Babel is transpiling JSX into react .createElement from here it renders the obj into htmlelement in doc
 
 - attributes in jsx should be in camel case 
+
+- the react functional component which is similar to js fucntion which returns a jsx .
+
+- the fucntion which return a react element is functional component or a fun which retun jsx is a         functional component 
+
+- Component Composition => calling other componnent in another component or we can say rendering a component  in another component .
+
+- jsx will take care of malious data which is fetching from an api it will sanitize and prevents crosside scripting .
+
+
+- jsx is javascript xml 
