@@ -42,3 +42,13 @@
 
 
 - jsx is javascript xml 
+
+-- WHAT IS PROPS?
+it is a arugument to the function when want to make dynamic we use props and we pass data through it 
+and it is an object .
+- config driven UI
+- all the UI is driven by config
+
+- config which means data --interview quetsion dyamic use
+
+
