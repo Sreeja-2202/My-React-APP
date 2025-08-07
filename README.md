@@ -2,6 +2,9 @@
 - Dev Build
 - Local Server
 - HMR = Hot Module Replacement
+
+
+
 - File Watching Algoritham ("written in c++")
 - Caching - Faster Builds
 - image Optimization 
@@ -49,6 +52,26 @@ and it is an object .
 - config driven UI
 - all the UI is driven by config
 
-- config which means data --interview quetsion dyamic use
+- config which means data --interview quetsion dyamic use example how swiggy  constuted the data .
+
+
+- https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4065284&lng=78.5139136&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
+
+
+- we should not never never we should not index as a key to specific itms as unique in a react it is bad practice .
+
+
+-   {resObj.restaurants.map((restaurant,index))}  -->  X 
+
+    -return(
+        <div>
+            <div className="search">Search</div>
+            <div className="res-container">
+                {resObj.restaurants.map((restaurant) => (
+
+    <ResturantCard key={restaurant.info.id} resData={restaurant} />
+))})
+
+this is good way to give  good practice
 
 

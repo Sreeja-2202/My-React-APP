@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
 // import Logo from "./images/logo.png"
+// import StarIcon from "./assets/icons/star.png"
 /**
  * Header
  *  - Logo
@@ -50,15 +51,26 @@ const Header =()=>{
 
 const ResturantCard =(props) =>{
     const {resData}=props
-    console.log(props)
+    const {name,avgRating,cuisines,locality} = resData?.info
+    const {slaString} = resData?.info.sla // optional Chaining
+    
     return(
         <div className="res-card">
-            <img  className ="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/mt2aggiscfl3yviatwng" alt="Bakery World"/>
-            <h3>{resData.info.name}</h3>
-            <h4>⭐{resData.info.avgRating}</h4>
-            <h4>{resData.info.cuisines}</h4>
-            <h4>{resData.info.locality}</h4>
-            <h4>{resData.info.costForTwo}</h4>
+            <img  className ="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId} alt="Bakery World"/>
+            <h3 className="res_name">{name}</h3>
+            <h4>
+              
+               <span className="res_rating"><img className="star_icon" src="https://ik.imagekit.io/q4iigq3f2/star.png?updatedAt=1754476867381" alt="star" width="16" />
+                {" "}{avgRating }</span>
+              
+              <span className="res_time">{" "}{"("}{slaString}{")"}</span>
+              
+            </h4>
+            
+            
+            <h4 className="res_cuisines">{cuisines.join(", ")}</h4>
+            <h4 className="res_locality">{locality}</h4>
+            {/* <h4>{resData.info.costForTwo}</h4> */}
             
 
 
@@ -1611,7 +1623,7 @@ const resObj = {
                       "areaName": "Ashok Nagar",
                       "costForTwo": "₹300 for two",
                       "cuisines": [
-                        "Pizzas",
+                        "Pizzas",  
                         "Italian",
                         "Desserts"
                       ],
@@ -1979,8 +1991,9 @@ const Body =() =>{
         <div>
             <div className="search">Search</div>
             <div className="res-container">
-                {resObj.restaurants.map((restaurant, index) => (
-    <ResturantCard key={index} resData={restaurant} />
+                {resObj.restaurants.map((restaurant) => (
+
+    <ResturantCard key={restaurant.info.id} resData={restaurant} />
 ))}
                 
                 
@@ -1991,6 +2004,8 @@ const Body =() =>{
         </div>
     )
 }
+
+
 
 const AppLayout = ()=>{
     return (
