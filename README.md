@@ -75,3 +75,59 @@ and it is an object .
 this is good way to give  good practice
 
 
+- sperate file for sperate component
+
+
+- 
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * Body
+ *  - Search Component
+ *  - ResturantCardContainer
+ *    -- ResturantCard
+ *       - Img
+ *       -- Name of Res,Star Rating ,Cuisine,delivery time,LOcation 
+ * 
+ * Footer
+ *  - CopyRights
+ *  - Links
+ *  - Address
+ *  - Contact
+
+
+- we having to different types exports 
+
+   - default export 
+
+- To export mutliple components from single file we have to export with named exports
+
+    - named export import {component} 
+
+- REACT is faster 
+   - yes it can do DOM Manuplications very faster 
+   - Reconsiliaction
+   - Parllelly to  work UI and Data we use the SuperPower in React is which Are Hooks in react 
+   - State Varible in react which is super power variable.
+   - Hooks in react
+     - UseState
+
+- Lets see what is Hooks in REACT
+
+  - A Normal JS fintion which is given by REACT which are prebuilt all ready Retun in react 
+
+  - Normal JS utility function
+
+  - There are 2  mian hooks - 99% we  use these 2 hooks for lots of time
+
+     - useState()
+     - useEffect()
+
+- useState ()--> Super power state variable in react
+- we have to import the useState in React as Named Import . 
+    - import {useState} from react.
+- Creating State Variable
+    Local State Variable 
+
+
+
