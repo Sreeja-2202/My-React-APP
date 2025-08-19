@@ -3,8 +3,11 @@ import resObj from "../utils/mockData";
 import { useState } from "react";
 
 const Body =() =>{
+    const array=resObj.restaurants
+    const [listOfResturants,setListOfResturants]=useState(array);
+    console.log(array)
 
-const [resObj,setResObj] = useState([resObj])
+
 
 
     return(
@@ -12,16 +15,19 @@ const [resObj,setResObj] = useState([resObj])
             <div className="filter">
                 <button className="filter_btn" 
                 onClick={()=>{
-                    const filteredData = resObj.restaurants.filter( (res)=>res.info.avgRating>4)
-                    // console.log()
-                    setResObj(filteredData)
+                   const filteredList = listOfResturants.filter( (res)=>res.info.avgRating>=4.5)
+                    // console.log(resObj.restaurants.filter( (res)=>res.info.avgRating>4.5))
+                    // console.log(filteredList)
+                    // console.log(resObj.restaurants)
+                    // console.log(setListOfResturants(filteredList))
+                    setListOfResturants(filteredList)
 
                 }} >
                 Top Rated Resturants
           </button>
             </div>
             <div className="res-container">
-                {resObj.restaurants.map((restaurant) => (
+                {listOfResturants.map((restaurant) => (
 
     <ResturantCard key={restaurant.info.id} resData={restaurant} />
 ))}
