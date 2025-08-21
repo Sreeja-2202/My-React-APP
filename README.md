@@ -114,7 +114,7 @@ this is good way to give  good practice
 
 - Lets see what is Hooks in REACT
 
-  - A Normal JS fintion which is given by REACT which are prebuilt all ready Retun in react 
+  - A Normal JS function which is given by REACT which are prebuilt all ready Retun in react 
 
   - Normal JS utility function
 
@@ -128,6 +128,114 @@ this is good way to give  good practice
     - import {useState} from react.
 - Creating State Variable
     Local State Variable 
+
+- const [listOfREsturants] = useState([]) --> creating a state vairable 
+                                       |
+                                       default value -->  which is like passing parameters to the functions 
+- let listOfREsturants;--> creating normal variable .
+
+- const [listOfREsturants] = useState([......]) --> when we want to modify this array we want to give a second variable 
+
+- const [listOfREsturants,setListofResturants] = useState([......])
+
+- resobj.resturants
+    |
+lets store all this in the  "listOfREsturants"
+
+- when ever the state varible changes react will re render the component ******IMP
+
+
+
+- **RECONCILIATION ALGORITHAM**
+
+# React Fiber
+- we are having 15 Res cards ---> we are filtered into 3 restro cards
+
+##  Virtual DOM
+
+- Virtual DOM is a representation of actual DOM 
+
+- what is Actula DOM?
+
+ - <div>
+     <h1>Hi</h1>
+    </div>
+
+
+## Diff Algorithm
+
+- 7 restro cards ---> After button clicked  ---> new filtered data of 3 restro cards 
+-           |                                         |
+-          old                                      new 
+- react will find the main diff usng diff alg and sort then it updates the DOM so react is fast and which is virtual dom it uses and updates the UI .
+
+## Diff Alg
+
+- A diffing algorithm is a computational method used to identify the differences between two versions of a data structure, often represented as trees. In the context of front-end frameworks like React, the diffing algorithm plays a crucial role in optimizing UI updates.
+How it Works (in React's Virtual DOM):
+Virtual DOM Comparison:
+When a component's state or props change, React creates a new Virtual DOM tree representing the updated UI. The diffing algorithm then compares this new Virtual DOM tree with the previous one.
+
+
+
+
+**Monolith Arch**
+- when web was developed traditionally the dev used monolith arch 
+- Backend Service 
+- UI service
+- Authethication Service
+- Data Base Service
+- SMS sending Service
+- Email Notification Service 
+## BE and FE dev work on same project
+## every one in monolith arch used to work on single project .
+
+**MicroServices Arch ***
+- Backend Service 
+- UI service
+- Authethication Service
+- Data Base Service
+- SMS sending Service
+- Email Notification Service 
+## All the service combine toghters forms a big application everthing has individual projects according to their role
+
+## THis is Known as speration of concerns Follows the Single responsibilty Prnciple where each and every service as their own job 
+
+## Lets Us see how these two services work each other 
+
+- BE <--> UI , etcc.. how to deploya and acess
+
+- react project now i am making in  UI microservice
+- we can write Microservices  in differenct languages - like UI in react , BE with JAVA, SMS in golang etc..
+- how these services are connected
+
+- just like our UI service as connected to the port 1234
+- similar to this other services will work on differnt ports :1000 - > BE,
+- SMS:-> :3000 port 
+- calling when requires as /sms or /api or using port 
+
+## https://app.eraser.io/workspace/P05V898kZiUGaNKiE5e9
+
+
+
+**useEffect**
+
+- is a simple function which takes two aruguments passed in useEffect 
+- Arrow Function  / call bank fun  as 1st arugument
+- dependency arry as 2nd argument
+
+- useEffect(()=>{},[])
+
+- useEffect is called after the 1st render the code inside the use effect is called 
+
+
+
+
+
+
+
+
+
 
 
 

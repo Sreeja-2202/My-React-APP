@@ -1,12 +1,15 @@
 import ResturantCard from "./ResturantCard";
 import resObj from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body =() =>{
     const array=resObj.restaurants
-    const [listOfResturants,setListOfResturants]=useState(array);
-    console.log(array)
+    const [listOfResturants,setListOfResturants]=useState(resObj.restaurants);
+    // console.log(setListOfResturants)
 
+   useEffect(()=>{
+    console.log("useEffect Called")
+   },[]);
 
 
 
@@ -21,10 +24,12 @@ const Body =() =>{
                     // console.log(resObj.restaurants)
                     // console.log(setListOfResturants(filteredList))
                     setListOfResturants(filteredList)
+                    // console.log(setListOfResturants(filteredList))
 
                 }} >
                 Top Rated Resturants
           </button>
+          {console.log("useEffect  2 Called")}
             </div>
             <div className="res-container">
                 {listOfResturants.map((restaurant) => (
