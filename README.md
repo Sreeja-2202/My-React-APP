@@ -228,11 +228,24 @@ When a component's state or props change, React creates a new Virtual DOM tree r
 
 - useEffect is called after the 1st render the code inside the use effect is called 
 
+- always body will render 1st before the 1st call of useeffect.
+
+- we use fetch function to fetch the data from API 
+- fetch is  the inbuilt function which is given by the browser
 
 
+## CORS POLICY
+
+- CORS - our browsers,Blockers to cll API from one Orgin to antother origin ,
+- our browsers that not allowing as to our local host to swiggy API if version is mismatch  it will block .
 
 
+## Event Loop
 
+- Call Stack
+- Function 
+- HOF  
+- 
 
 
 

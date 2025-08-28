@@ -8,8 +8,13 @@ const Body =() =>{
     // console.log(setListOfResturants)
 
    useEffect(()=>{
-    console.log("useEffect Called")
+    fetchData();
+
    },[]);
+
+   const fetchData = ()=>{
+    const data  = fetch()
+   }
 
 
 
